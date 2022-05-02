@@ -2,18 +2,11 @@ package com.teejaywurld.ChapterTwo;
 
 import java.util.Scanner;
 
-public class ArithmeticSmallestLargest {
+public class FiveIntegersApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int firstNumber;
-        int secondNumber;
-        int thirdNumber;
-        int sum;
-        int average;
-        int product;
-        int smallest;
-        int largest;
+        int firstNumber, secondNumber, thirdNumber, fourthNumber, fifthNumber;
 
         System.out.print("Enter your first number here: ");
         firstNumber = scanner.nextInt();
@@ -24,29 +17,36 @@ public class ArithmeticSmallestLargest {
         System.out.print("Enter your third number here: ");
         thirdNumber = scanner.nextInt();
 
-        sum = firstNumber + secondNumber + thirdNumber;
-        average = sum / 3;
-        product = firstNumber * secondNumber * thirdNumber;
+        System.out.print("Enter your fourth number here: ");
+        fourthNumber = scanner.nextInt();
 
-        largest = firstNumber;
+        System.out.print("Enter your fifth number here: ");
+        fifthNumber = scanner.nextInt();
+
+        int largest = firstNumber;
         if (secondNumber > largest)
             largest = secondNumber;
         if (thirdNumber > largest)
             largest = thirdNumber;
+        if (fourthNumber > largest)
+            largest = fourthNumber;
+        if (fifthNumber > largest)
+            largest = fifthNumber;
 
-        smallest = firstNumber;
+        int smallest = firstNumber;
         if (secondNumber < smallest)
             smallest = secondNumber;
         if (thirdNumber < smallest)
             smallest = thirdNumber;
+        if (fourthNumber < smallest)
+            smallest = fourthNumber;
+        if (fifthNumber < smallest)
+            smallest = fifthNumber;
 
         System.out.println();
 
-        System.out.printf("The smallest number of the three is: %d%n", smallest);
-        System.out.printf("The largest number of the three is: %d%n", largest);
-        System.out.printf("The sum of the three numbers is %d%n", sum);
-        System.out.printf("The average of the three numbers is %d%n", average);
-        System.out.printf("The multiplication of the three numbers is %d%n", product);
+        System.out.printf("The smallest number is: %d%n", smallest);
+        System.out.printf("The largest number is: %d%n", largest);
 
         System.out.println();
     }

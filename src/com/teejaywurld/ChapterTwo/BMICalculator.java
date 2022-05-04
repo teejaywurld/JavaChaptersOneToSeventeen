@@ -19,18 +19,22 @@ public class BMICalculator {
         double BMI = weight / (height * height);
 
         if (BMI < 18.5){
-            System.out.println("You are 'Underweight'");
+            System.out.println("You are Underweight");
         }
 
-        if (BMI == 18.5 && BMI <= 24.9){
-            System.out.println("Your Body Mass Index is 'Normal'");
+        if (BMI >= 18.5){
+            if (BMI <= 24.9){
+                System.out.println("Your Body Mass Index is Normal");
+            }
         }
 
-        if (BMI == 25 && BMI <= 29.9){
-            System.out.println("Your Body Mass Index is 'Overweight'");
+        if (BMI >= 25){
+            if (BMI <= 29.9) {
+                System.out.println("Your Body Mass Index is Overweight");
+            }
         }
 
-        if (BMI >= 30){
+        if (BMI > 30){
             System.out.println("Friend, you are Obese. Work actively on your BMI");
         }
     }

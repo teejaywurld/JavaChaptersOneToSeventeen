@@ -62,7 +62,7 @@ public class UdemyCourse {
         int thirdNumber = 6;
         long fourthNumber = 50000L;
 
-        System.out.println("The total summation is = " + (fourthNumber + 10 *           (firstNumber + secondNumber + thirdNumber)));
+        System.out.println("The total summation is = " + (fourthNumber + 10 * (firstNumber + secondNumber + thirdNumber)));
 
         System.out.println();
 

@@ -16,8 +16,10 @@ public class CrapsGame {
 
     private static final SecureRandom randomNumbers = new SecureRandom();
 
+    // enum type with constants that represent the game status
     private enum Status { CONTINUE, WON, LOST };
 
+    // constants that represent common rolls of the dice
     private static final int SNAKE_EYES = 2;
     private static final int TREY = 3;
     private static final int SEVEN = 7;
@@ -26,11 +28,12 @@ public class CrapsGame {
 
     public static void main(String[] args) {
 
-        int myPoint = 0;
-        Status gameStatus;
+        int myPoint = 0; // point if no win or loss on first roll
+        Status gameStatus; // can contain CONTINUE, WON, LOST
 
-        int sumOfDice = rollDice();
+        int sumOfDice = rollDice(); // first roll of the dice
 
+        // determine game status and points based on first roll
         switch (sumOfDice){
             case SEVEN:
             case YO_ELEVEN:
@@ -47,9 +50,11 @@ public class CrapsGame {
                 System.out.printf("Pont is %d%n", myPoint);
         }
 
+        // while game is not complete
         while (gameStatus == Status.CONTINUE){
             sumOfDice = rollDice();
 
+            // determine game status
             if (sumOfDice == myPoint)
                 gameStatus = Status.WON;
             else
@@ -57,17 +62,23 @@ public class CrapsGame {
                     gameStatus = Status.LOST;
         }
 
+        // display won or lost message
         if (gameStatus == Status.WON)
             System.out.println("Player wins!");
         else
             System.out.println("Player loses **sad face** ");
     }
 
+    // roll dice, calculate sum and display results
     private static int rollDice() {
+
+        // pick random die value
         int die1 = 1 + randomNumbers.nextInt(6);
         int die2 = 1 + randomNumbers.nextInt(6);
 
         int sum = die1 + die2;
+
+        // display results of this roll
         System.out.printf("Player rolled %d + %d = %d%n", die1, die2, sum);
 
         return sum;

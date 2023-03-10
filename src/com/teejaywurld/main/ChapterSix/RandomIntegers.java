@@ -1,4 +1,4 @@
-package com.teejaywurld.main.ChapterOne;
+package com.teejaywurld.main.ChapterSix;
 
 import java.security.SecureRandom;
 

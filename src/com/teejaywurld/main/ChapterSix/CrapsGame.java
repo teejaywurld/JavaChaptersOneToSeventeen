@@ -1,4 +1,4 @@
-package com.teejaywurld.main.ChapterOne;
+package com.teejaywurld.main.ChapterSix;
 
 // TODO: A popular game of chance is a dice game known as craps. which is played in casinos and
 //  back alleys throughout the world. The rules of the game are straightforward:

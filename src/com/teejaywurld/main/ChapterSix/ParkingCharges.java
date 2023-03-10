@@ -62,7 +62,7 @@ public class ParkingCharges {
             }
         }
 
-        cummulativeGrossCharge = grossCharge + grossCharge1 + grossCharge2;
+        cummulativeGrossCharge += grossCharge + grossCharge1 + grossCharge2;
         System.out.printf("The total parking charges for all vehicles is $%.2f", cummulativeGrossCharge);
 
     }

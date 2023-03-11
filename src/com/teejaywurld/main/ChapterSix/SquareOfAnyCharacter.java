@@ -22,13 +22,12 @@ public class SquareOfAnyCharacter {
         System.out.print("Enter the side of a square: ");
         int side = scanner.nextInt();
 
-        //System.out.println();
-
         System.out.print("Enter a character: ");
         char fill = scanner.next().charAt(0);
         scanner.close();
 
         squareOfAsterisks(side, fill);
+
     }
 
     private static void squareOfAsterisks(int side, char fillCharacter) {

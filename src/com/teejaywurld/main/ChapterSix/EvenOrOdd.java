@@ -14,7 +14,7 @@ public class EvenOrOdd {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter your number here: ");
+        System.out.print("Enter a number here: ");
         int entry = scanner.nextInt();
         scanner.close();
 

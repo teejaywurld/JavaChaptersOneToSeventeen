@@ -18,7 +18,7 @@ public class PrimeNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter a number: ");
+        System.out.print("Enter any number of your choice: ");
         int number  = scanner.nextInt();
         scanner.close();
 
